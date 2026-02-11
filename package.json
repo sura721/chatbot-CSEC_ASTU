@@ -9,13 +9,28 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^3.0.24",
+    "@azure-rest/ai-inference": "^1.0.0-beta.6",
+    "@azure/core-auth": "^1.10.1",
+    "@clerk/nextjs": "^6.37.3",
+    "@google/generative-ai": "^0.24.1",
+    "ai": "^6.0.79",
+    "clsx": "^2.1.1",
+    "groq-sdk": "^0.37.0",
+    "lucide-react": "^0.563.0",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.2.0",
+    "nanoid": "^5.1.6",
     "next": "16.1.6",
+    "pdf-parse-fork": "^1.2.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
