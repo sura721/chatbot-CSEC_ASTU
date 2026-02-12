@@ -84,3 +84,9 @@ Software Engineering Student –at ASTU and chess Lover
 ### Account Settings
 
 <img src="./public/pic/img4.png" width="800" />
+
+---
+
+### chat widget
+
+<img src="./public/pic/chat.png" width="800" />
