@@ -49,6 +49,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
+     {/* Features Section */}
       <section className="py-24 px-6 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12">
           <div className="space-y-4">
@@ -75,9 +76,57 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Submission & Developer Note Section */}
+      
+      <section className="py-20 px-6 bg-indigo-900 text-white rounded-[3rem] mx-4 mb-20 overflow-hidden relative">
+        <div className="absolute top-0 right-0 p-10 opacity-10">
+          <Bot size={300} />
+        </div>
+        
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 rounded-3xl shadow-2xl">
+            <h2 className="text-2xl md:text-3xl font-black mb-6 border-b border-white/10 pb-4">
+              Submission: ASTU Dev Club Entrance Project
+            </h2>
+            
+            <div className="space-y-6 text-indigo-100 leading-relaxed">
+              <p className="text-lg">
+                <span className="font-bold text-white italic">Dear Evaluators,</span><br />
+                I am excited to submit my project for the 2026 Dev Club entrance. I have built a 
+                <span className="text-white font-bold"> Full-Stack RAG (Retrieval-Augmented Generation) AI Platform </span> 
+                designed specifically for the ASTU Software  community.
+              </p>
+
+              <div className="bg-indigo-600/40 p-6 rounded-2xl border border-indigo-400/30">
+                <h4 className="flex items-center gap-2 text-white font-bold mb-2">
+                  <ShieldCheck size={20} /> Special Note on Accessibility
+                </h4>
+                <p className="text-sm">
+                  To ensure a seamless evaluation experience, I have made the 
+                  <span className="text-white font-semibold"> Admin Dashboard public for all authenticated users</span>. 
+                  This allows you to immediately test document ingestion, manage the knowledge base, 
+                  and see the user directory without waiting for manual role promotion. In a production 
+                  environment, this would be restricted via Clerk&apos;s Role-Based Access Control (RBAC).
+                </p>
+              </div>
+
+              <div className="flex justify-between items-center pt-4 italic text-sm text-indigo-300 font-medium">
+                <p>Submitted by: Surafel</p>
+                <p>ASTU Software Engineering Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer Info */}
       <footer className="py-10 text-center text-gray-400 text-sm border-t border-gray-100">
-        &copy; 2026 Adama Science & Technology University - Software Engineering Department
+        &copy; 2026 Adama Science & Technology University - Dev Club
+      </footer>
+
+      {/* Footer Info */}
+      <footer className="py-10 text-center text-gray-400 text-sm border-t border-gray-100">
+        &copy; 2026 Adama Science & Technology University - dev Club
       </footer>
     </div>
   );

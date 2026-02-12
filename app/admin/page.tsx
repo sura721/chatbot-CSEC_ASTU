@@ -57,24 +57,35 @@ export default function AdminPage() {
   };
 
   // 3. Delete Specific File (AI Forgets)
-  const handleDeleteFile = async (name: string) => {
-    if (!confirm(`Are you sure? AI will lose all knowledge from: ${name}`)) return;
+ const handleDeleteFile = async (name: string) => {
+  if (!confirm(`Are you sure? AI will lose all knowledge from: ${name}`)) return;
 
-    await fetch("/api/ingest/list", { 
-        method: "DELETE", 
-        body: JSON.stringify({ fileName: name }) 
-    });
-    fetchDocs();
-  };
+  const res = await fetch("/api/ingest/list", { 
+      method: "DELETE", 
+      body: JSON.stringify({ fileName: name }) 
+  });
+  
+  if (res.ok) {
+    // Immediately refresh the list from the database
+    await fetchDocs(); 
+    alert(`${name} has been deleted and the AI has forgotten it.`);
+  }
+};
 
-  const handleClearAll = async () => {
-    if (!confirm("Wipe ALL knowledge? The AI will forget everything.")) return;
-    await fetch("/api/ingest/list", { 
-        method: "DELETE", 
-        body: JSON.stringify({ deleteAll: true }) 
-    });
-    fetchDocs();
-  };
+const handleClearAll = async () => {
+  if (!confirm("Wipe ALL knowledge? The AI will forget everything.")) return;
+  
+  const res = await fetch("/api/ingest/list", { 
+      method: "DELETE", 
+      body: JSON.stringify({ deleteAll: true }) 
+  });
+
+  if (res.ok) {
+    // Immediately refresh the list
+    await fetchDocs();
+    alert("AI Brain has been reset to empty.");
+  }
+};
 
   return (
     <div className="max-w-6xl mx-auto p-6 text-black min-h-screen">

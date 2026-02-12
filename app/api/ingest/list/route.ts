@@ -11,19 +11,14 @@ export async function GET() {
 
 // DELETE specific file OR Delete All
 export async function DELETE(req: Request) {
-  try {
-    const { fileName, deleteAll } = await req.json();
-    await connectDB();
+  const { fileName, deleteAll } = await req.json();
+  await connectDB();
 
-    if (deleteAll) {
-      await DocumentModel.deleteMany({});
-      return NextResponse.json({ success: true, message: "Brain cleared" });
-    }
-
-    // Specific file deletion
-    const result = await DocumentModel.deleteMany({ "metadata.fileName": fileName });
-    return NextResponse.json({ success: true, deletedCount: result.deletedCount });
-  } catch (err) {
-    return NextResponse.json({ success: false }, { status: 500 });
+  if (deleteAll) {
+    await DocumentModel.deleteMany({}); // Wipes everything
+    return NextResponse.json({ success: true, message: "AI Knowledge cleared" });
   }
+
+  await DocumentModel.deleteMany({ "metadata.fileName": fileName });
+  return NextResponse.json({ success: true });
 }
