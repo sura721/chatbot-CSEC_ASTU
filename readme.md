@@ -61,3 +61,26 @@ A **Retrieval-Augmented Generation (RAG) chatbot platform** for the ASTU Dev Clu
 
 **Surafel**  
 Software Engineering Student –at ASTU and chess Lover
+
+
+## Screenshots
+
+### Landing Page
+
+<img src="./public/pic/img1.png" width="800" />
+<br/><br/>
+<img src="./public/pic/img2.png" width="800" />
+<br/><br/>
+<img src="./public/pic/img5.png" width="800" />
+
+---
+
+### Admin Dashboard
+
+<img src="./public/pic/img3.png" width="800" />
+
+---
+
+### Account Settings
+
+<img src="./public/pic/img4.png" width="800" />
